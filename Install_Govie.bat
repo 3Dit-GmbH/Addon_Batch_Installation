@@ -1,11 +1,13 @@
 @ECHO OFF 
+Setlocal EnableDelayedExpansion
 
 set version_list=80 81 82 83 90 91 92 93 94
-set prefix="C:\Program Files\Blender Foundation\Blender 2."
+set prefix=C:\Program Files\Blender Foundation\Blender 2.
 set blenderpath=
 
 for %%v in (%version_list%) do (
-    if exist %prefix%%%v (set "blenderpath=%prefix%%%v" & echo "Found Blender Version %%v")
+    set "full_path=%prefix%%%v"
+    if exist !full_path! (set blenderpath=!full_path! & echo "Found Blender Version %%v")
 )
 
 cd %blenderpath%
