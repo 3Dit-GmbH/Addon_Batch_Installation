@@ -10,6 +10,7 @@ for %%v in (%version_list%) do (
     if exist !full_path! (set blenderpath=!full_path! & echo "Found Blender Version %%v")
 )
 
+c:
 cd %blenderpath%
 blender -b -P .\Addon\install_addon.py -- -addon_path .\Addon\GovieTools.zip -addon_name GovieTools
 blender -b -P .\Addon\install_addon.py -- -addon_path .\Addon\GLBTextureTools.zip -addon_name GLBTextureTools
