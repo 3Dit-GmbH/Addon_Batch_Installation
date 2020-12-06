@@ -13,10 +13,10 @@ for %%v in (%version_list%) do (
 set blenderpath=%blenderpath:~0,-1%
 set PATH=%PATH%;%blenderpath%
 
-echo %blenderpath%
-
+echo Installing addons for Blender installation in %blenderpath%
 
 blender -b -P .\Addon\install_addon.py -- -addon_path .\Addon\GovieTools.zip -addon_name GovieTools
 blender -b -P .\Addon\install_addon.py -- -addon_path .\Addon\GLBTextureTools.zip -addon_name GLBTextureTools
+blender -b -P .\Addon\install_addon.py -- -addon_path .\Addon\StepImport.zip -addon_name GLStepImport
 
 pause
