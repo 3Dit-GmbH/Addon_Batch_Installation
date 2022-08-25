@@ -1,8 +1,8 @@
 @ECHO OFF 
 Setlocal EnableDelayedExpansion
 
-set version_list=80 81 82 83 90 91 92 93 94 95
-set prefix=C:\Program Files\Blender Foundation\Blender 2.
+set version_list=0 1 2 3 4 5 6 7 8 9 11 12 13 14 15 16 17
+set prefix=C:\Program Files\Blender Foundation\Blender 3.
 set blenderpath=
 
 for %%v in (%version_list%) do (
